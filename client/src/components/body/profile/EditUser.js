@@ -63,30 +63,7 @@ function EditUser() {
                 </button>
             </div>
 
-            <div className="col-left">
-                <h2>Edit User</h2>
-
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" defaultValue={editUser.name} disabled/>
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" defaultValue={editUser.email} disabled />
-                </div>
-
-                <div className="form-group">
-                    <input type="checkbox" id="isAdmin" checked={checkAdmin}
-                    onChange={handleCheck} />
-                    <label htmlFor="isAdmin">isAdmin</label>
-                </div>
-
-                <button onClick={handleUpdate}>Update</button>
-
-                {err && showErrMsg(err)}
-                {success && showSuccessMsg(success)}
-            </div>
+           
         </div>
     )
 }
