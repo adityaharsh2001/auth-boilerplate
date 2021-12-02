@@ -112,7 +112,7 @@ function Login() {
                 />
                 
                 <FacebookLogin
-                appId="Your facebook app id"
+                appId="756415158630891"
                 autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook} 
