@@ -5,6 +5,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const path = require('path')
+const router = require('./routes/userRouter')
 
 
 const app = express()
@@ -16,9 +17,14 @@ app.use(fileUpload({
 }))
 
 // Routes
+
+
 app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/upload'))
 
+router.get('/', (req, res) => {
+    res.send(`GeekyAdi Is Awesome...Working OK`);
+});
 
 // Connect to mongodb
 const URI = process.env.MONGODB_URL
