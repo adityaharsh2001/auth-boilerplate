@@ -23,7 +23,7 @@ app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/upload'))
 
 router.get('/', (req, res) => {
-    res.send(`GeekyAdi Is Awesome...Working OK`);
+    res.send(`GeekyAdi Is Awesome`);
 });
 
 // Connect to mongodb
@@ -38,12 +38,12 @@ mongoose.connect(URI, {
     console.log("Connected to mongodb")
 })
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'))
-    app.get('*', (req, res)=>{
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    })
-}
+// if(process.env.NODE_ENV === 'production'){
+//     app.use(express.static('client/build'))
+//     app.get('*', (req, res)=>{
+//         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+//     })
+// }
 
 
 
