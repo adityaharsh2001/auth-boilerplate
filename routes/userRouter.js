@@ -3,6 +3,10 @@ const userCtrl = require('../controllers/userCtrl')
 const auth = require('../middleware/auth')
 const authAdmin = require('../middleware/authAdmin')
 
+router.post('/', (req, res) {
+    res.send("GeekyAdi is Awesome")
+})
+
 router.post('/register', userCtrl.register)
 
 router.post('/activation', userCtrl.activateEmail)
